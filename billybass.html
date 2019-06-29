@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module billybass</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>billybass</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/opt/AlexaPi/src/billybass.py">/opt/AlexaPi/src/billybass.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="coloredlogs.html">coloredlogs</a><br>
+</td><td width="25%" valign=top><a href="logging.html">logging</a><br>
+</td><td width="25%" valign=top><a href="threading.html">threading</a><br>
+</td><td width="25%" valign=top><a href="time.html">time</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="threading.html#Thread">threading.Thread</a>(<a href="builtins.html#object">builtins.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="billybass.html#BillyBass">BillyBass</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="BillyBass">class <strong>BillyBass</strong></a>(<a href="threading.html#Thread">threading.Thread</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Purpose:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Executes&nbsp;commands&nbsp;that&nbsp;move&nbsp;the&nbsp;motors&nbsp;of&nbsp;the&nbsp;billy&nbsp;bass&nbsp;animatronic.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;These&nbsp;commands&nbsp;represent&nbsp;different&nbsp;things&nbsp;the&nbsp;animatronic&nbsp;can&nbsp;do,&nbsp;such&nbsp;as&nbsp;move&nbsp;it's&nbsp;head,&nbsp;tail,&nbsp;or&nbsp;mouth.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Commands&nbsp;are&nbsp;run&nbsp;by&nbsp;passing&nbsp;it&nbsp;through&nbsp;the&nbsp;constructor&nbsp;via&nbsp;its&nbsp;task&nbsp;parameter,&nbsp;which&nbsp;subsequently&nbsp;executes&nbsp;that&nbsp;command&nbsp;if&nbsp;it&nbsp;is&nbsp;valid.&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Once&nbsp;the&nbsp;function&nbsp;has&nbsp;executed,&nbsp;the&nbsp;object&nbsp;is&nbsp;destroyed&nbsp;because&nbsp;it&nbsp;inherits&nbsp;threading&nbsp;behaviors<br>
+&nbsp;<br>
+Behavior:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inherits&nbsp;multithreading.&nbsp;This&nbsp;allows&nbsp;the&nbsp;fish&nbsp;to&nbsp;respond&nbsp;to&nbsp;the&nbsp;voice&nbsp;commands&nbsp;by&nbsp;moving&nbsp;its&nbsp;motors<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while&nbsp;at&nbsp;the&nbsp;same&nbsp;time&nbsp;outputting&nbsp;the&nbsp;audio&nbsp;coming&nbsp;from&nbsp;alexapi.&nbsp;It&nbsp;also&nbsp;allows&nbsp;for&nbsp;it&nbsp;to&nbsp;listen&nbsp;for&nbsp;other&nbsp;voice&nbsp;commands&nbsp;while&nbsp;its&nbsp;executing.&nbsp;<br>
+Usage:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It&nbsp;is&nbsp;highly&nbsp;recommended&nbsp;to&nbsp;utilize&nbsp;this&nbsp;class&nbsp;using&nbsp;the&nbsp;with&nbsp;keyword&nbsp;as&nbsp;it&nbsp;will&nbsp;handle&nbsp;resource&nbsp;management&nbsp;without&nbsp;having&nbsp;to&nbsp;explicitly&nbsp;close&nbsp;the&nbsp;threads.&nbsp;This&nbsp;is&nbsp;because&nbsp;this&nbsp;class&nbsp;is&nbsp;a&nbsp;context&nbsp;manager.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ex)&nbsp;with&nbsp;billybass(task="greet"):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--enter&nbsp;code&nbsp;here&nbsp;if&nbsp;necessary--<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="billybass.html#BillyBass">BillyBass</a></dd>
+<dd><a href="threading.html#Thread">threading.Thread</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="BillyBass-__enter__"><strong>__enter__</strong></a>(self)</dt><dd><tt>Magic&nbsp;method&nbsp;that&nbsp;is&nbsp;called&nbsp;when&nbsp;the&nbsp;class&nbsp;is&nbsp;being&nbsp;instantiated&nbsp;<br>
+with&nbsp;the&nbsp;'with'&nbsp;keyword&nbsp;(context&nbsp;manager&nbsp;protocol).&nbsp;This&nbsp;method&nbsp;allows&nbsp;us&nbsp;to&nbsp;define&nbsp;what&nbsp;function&nbsp;to&nbsp;execute&nbsp;based&nbsp;on&nbsp;the&nbsp;task&nbsp;given&nbsp;in&nbsp;the&nbsp;constructor&nbsp;variable.<br>
+If&nbsp;the&nbsp;task&nbsp;is&nbsp;illegal&nbsp;or&nbsp;does&nbsp;not&nbsp;exist,&nbsp;we&nbsp;raise&nbsp;an&nbsp;exception.<br>
+&nbsp;<br>
+Using&nbsp;context&nbsp;managers&nbsp;gives&nbsp;us&nbsp;the&nbsp;security&nbsp;in&nbsp;knowing&nbsp;the&nbsp;thread<br>
+that&nbsp;is&nbsp;spawned&nbsp;when&nbsp;this&nbsp;class&nbsp;is&nbsp;instantiated&nbsp;is&nbsp;being&nbsp;released&nbsp;without&nbsp;having&nbsp;to&nbsp;deal&nbsp;with&nbsp;releasing&nbsp;it&nbsp;explicitly&nbsp;in&nbsp;the&nbsp;code&nbsp;that&nbsp;calls&nbsp;it.&nbsp;(__exit__&nbsp;frees&nbsp;the&nbsp;resource)</tt></dd></dl>
+
+<dl><dt><a name="BillyBass-__exit__"><strong>__exit__</strong></a>(self, exc_type, exc_val, exc_tb)</dt><dd><tt>Called&nbsp;once&nbsp;were&nbsp;exiting&nbsp;from&nbsp;the&nbsp;with&nbsp;statement.</tt></dd></dl>
+
+<dl><dt><a name="BillyBass-__init__"><strong>__init__</strong></a>(self, task)</dt><dd><tt>Constructor&nbsp;calls&nbsp;superclass(threading)&nbsp;to&nbsp;set&nbsp;up&nbsp;its&nbsp;appropriate&nbsp;variables<br>
+It&nbsp;also&nbsp;initalizes&nbsp;the&nbsp;adafruit&nbsp;motorkit,&nbsp;which&nbsp;we&nbsp;need&nbsp;in&nbsp;order&nbsp;to&nbsp;manipulate&nbsp;the&nbsp;motors&nbsp;of&nbsp;the&nbsp;animatronic.<br>
+:param&nbsp;task:&nbsp;string&nbsp;that&nbsp;represents&nbsp;a&nbsp;command&nbsp;to&nbsp;the&nbsp;alexa&nbsp;service&nbsp;is&nbsp;being&nbsp;executed&nbsp;(&nbsp;ex)&nbsp;When&nbsp;querying&nbsp;alexa</tt></dd></dl>
+
+<dl><dt><a name="BillyBass-dance"><strong>dance</strong></a>(self)</dt><dd><tt>The&nbsp;fish&nbsp;can&nbsp;dance!&nbsp;Moves&nbsp;it's&nbsp;head&nbsp;and&nbsp;tail&nbsp;with&nbsp;a&nbsp;time&nbsp;buffer<br>
+in&nbsp;between&nbsp;so&nbsp;we&nbsp;don't&nbsp;overload&nbsp;the&nbsp;fish&nbsp;with&nbsp;too&nbsp;much&nbsp;current!<br>
+BUG:&nbsp;Fish&nbsp;stops&nbsp;dancing&nbsp;after&nbsp;a&nbsp;couple&nbsp;seconds&nbsp;of&nbsp;usage.&nbsp;I&nbsp;have&nbsp;a&nbsp;feeling&nbsp;it&nbsp;has&nbsp;something&nbsp;to&nbsp;do&nbsp;with<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thread&nbsp;synchronization&nbsp;as&nbsp;when&nbsp;the&nbsp;dance&nbsp;function&nbsp;is&nbsp;called&nbsp;in&nbsp;main.py<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;it&nbsp;is&nbsp;continiously&nbsp;called&nbsp;which&nbsp;spawns&nbsp;more&nbsp;threads&nbsp;to&nbsp;execute&nbsp;the&nbsp;same&nbsp;function.<br>
+&nbsp;<br>
+The&nbsp;fish&nbsp;dances&nbsp;in&nbsp;main.py&nbsp;when&nbsp;we&nbsp;play&nbsp;a&nbsp;playlist</tt></dd></dl>
+
+<dl><dt><a name="BillyBass-greet"><strong>greet</strong></a>(self)</dt><dd><tt>Moves&nbsp;mouth&nbsp;in&nbsp;a&nbsp;specific&nbsp;way&nbsp;when&nbsp;the&nbsp;alexapi&nbsp;service&nbsp;starts.<br>
+When&nbsp;its&nbsp;first&nbsp;initalized,&nbsp;the&nbsp;alexapi&nbsp;service&nbsp;notifies&nbsp;it&nbsp;is&nbsp;ready&nbsp;to&nbsp;run&nbsp;by&nbsp;saying&nbsp;"hello"</tt></dd></dl>
+
+<dl><dt><a name="BillyBass-move_head"><strong>move_head</strong></a>(self)</dt><dd><tt>Moves&nbsp;the&nbsp;head&nbsp;of&nbsp;the&nbsp;billybass&nbsp;fish&nbsp;by&nbsp;controlling&nbsp;the&nbsp;motor&nbsp;that&nbsp;moves&nbsp;it's&nbsp;body&nbsp;(negative&nbsp;values&nbsp;move&nbsp;head)</tt></dd></dl>
+
+<dl><dt><a name="BillyBass-move_mouth"><strong>move_mouth</strong></a>(self)</dt><dd><tt>Moves&nbsp;the&nbsp;mouth&nbsp;of&nbsp;the&nbsp;billybass&nbsp;fish&nbsp;by&nbsp;controlling&nbsp;the&nbsp;motor&nbsp;that&nbsp;moves&nbsp;it's&nbsp;mouth</tt></dd></dl>
+
+<dl><dt><a name="BillyBass-move_tail"><strong>move_tail</strong></a>(self)</dt><dd><tt>Moves&nbsp;the&nbsp;tail&nbsp;of&nbsp;the&nbsp;billybass&nbsp;fish&nbsp;by&nbsp;controlling&nbsp;the&nbsp;motor&nbsp;that&nbsp;moves&nbsp;it's&nbsp;body&nbsp;(positive&nbsp;values&nbsp;move&nbsp;tail)</tt></dd></dl>
+
+<dl><dt><a name="BillyBass-release_motor"><strong>release_motor</strong></a>(self, sensitivity)</dt><dd><tt>Releases&nbsp;motor&nbsp;by&nbsp;sleeping&nbsp;for&nbsp;a&nbsp;specified&nbsp;amount&nbsp;of&nbsp;time<br>
+:param&nbsp;sensitivity:&nbsp;time&nbsp;in&nbsp;seconds&nbsp;to&nbsp;sleep&nbsp;for</tt></dd></dl>
+
+<dl><dt><a name="BillyBass-reset_motors"><strong>reset_motors</strong></a>(self)</dt><dd><tt>Helper&nbsp;function&nbsp;that&nbsp;resets&nbsp;both&nbsp;of&nbsp;the&nbsp;positions&nbsp;of&nbsp;the&nbsp;<br>
+motors&nbsp;to&nbsp;their&nbsp;default&nbsp;values</tt></dd></dl>
+
+<dl><dt><a name="BillyBass-response"><strong>response</strong></a>(self)</dt><dd><tt>Moves&nbsp;mouth&nbsp;of&nbsp;billybass&nbsp;fish&nbsp;when&nbsp;alexa&nbsp;is&nbsp;responding<br>
+to&nbsp;a&nbsp;query&nbsp;the&nbsp;user&nbsp;requested.<br>
+NOTE:&nbsp;This&nbsp;function&nbsp;is&nbsp;redundant&nbsp;in&nbsp;a&nbsp;sense&nbsp;that&nbsp;it&nbsp;only&nbsp;calls&nbsp;one&nbsp;function&nbsp;and&nbsp;debug&nbsp;logs.&nbsp;However&nbsp;I&nbsp;implemented&nbsp;it&nbsp;this&nbsp;way<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;because&nbsp;there&nbsp;may&nbsp;be&nbsp;multiple&nbsp;ways&nbsp;the&nbsp;billybass&nbsp;fish&nbsp;can&nbsp;respond&nbsp;to&nbsp;a&nbsp;query&nbsp;(it&nbsp;can&nbsp;move&nbsp;its&nbsp;head&nbsp;and&nbsp;tail&nbsp;as&nbsp;well)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;so&nbsp;its&nbsp;nice&nbsp;to&nbsp;know&nbsp;I&nbsp;don't&nbsp;have&nbsp;to&nbsp;mess&nbsp;around&nbsp;with&nbsp;the&nbsp;actual&nbsp;function&nbsp;that&nbsp;moves&nbsp;the&nbsp;motors&nbsp;and&nbsp;instead&nbsp;can&nbsp;mess&nbsp;around&nbsp;with&nbsp;it&nbsp;here.</tt></dd></dl>
+
+<dl><dt><a name="BillyBass-run"><strong>run</strong></a>(self)</dt><dd><tt>When&nbsp;the&nbsp;thread&nbsp;is&nbsp;executed&nbsp;it&nbsp;runs&nbsp;this&nbsp;method<br>
+It&nbsp;keeps&nbsp;executing&nbsp;until&nbsp;were&nbsp;told&nbsp;to&nbsp;stop.&nbsp;(self.<strong>done</strong>)<br>
+If&nbsp;any&nbsp;errors&nbsp;occur&nbsp;we&nbsp;output&nbsp;to&nbsp;the&nbsp;user&nbsp;and&nbsp;raise&nbsp;the&nbsp;exception</tt></dd></dl>
+
+<dl><dt><a name="BillyBass-run_motor"><strong>run_motor</strong></a>(self, motor, sensitivity, steps)</dt><dd><tt>:param&nbsp;motor:&nbsp;which&nbsp;motor&nbsp;to&nbsp;run&nbsp;this&nbsp;on&nbsp;(mouth&nbsp;or&nbsp;body)<br>
+:param&nbsp;sensitivity:&nbsp;delays&nbsp;the&nbsp;time&nbsp;between&nbsp;steps.&nbsp;The&nbsp;higher&nbsp;the&nbsp;value,&nbsp;the&nbsp;longer&nbsp;it&nbsp;will&nbsp;wait&nbsp;(measured&nbsp;in&nbsp;seconds)<br>
+:param&nbsp;steps:&nbsp;list&nbsp;of&nbsp;floats&nbsp;that&nbsp;represent&nbsp;a&nbsp;sequence&nbsp;of&nbsp;positions&nbsp;on&nbsp;where&nbsp;to&nbsp;move&nbsp;the&nbsp;motor&nbsp;to&nbsp;[value&nbsp;of&nbsp;motor&nbsp;can&nbsp;only&nbsp;-1&nbsp;&lt;=&nbsp;x&nbsp;&lt;=&nbsp;1.</tt></dd></dl>
+
+<dl><dt><a name="BillyBass-stop"><strong>stop</strong></a>(self)</dt><dd><tt>Stops&nbsp;execution&nbsp;of&nbsp;the&nbsp;thread&nbsp;by&nbsp;setting&nbsp;this&nbsp;flag&nbsp;to<br>
+true.&nbsp;Once&nbsp;execution&nbsp;of&nbsp;the&nbsp;thread&nbsp;has&nbsp;finished,&nbsp;it&nbsp;will<br>
+free&nbsp;its&nbsp;resources</tt></dd></dl>
+
+<dl><dt><a name="BillyBass-trigger"><strong>trigger</strong></a>(self)</dt><dd><tt>Moves&nbsp;head&nbsp;and&nbsp;mouth&nbsp;of&nbsp;the&nbsp;billybass&nbsp;fish.&nbsp;This&nbsp;should&nbsp;be&nbsp;called<br>
+when&nbsp;the&nbsp;user&nbsp;triggers&nbsp;alexa&nbsp;for&nbsp;a&nbsp;query&nbsp;so&nbsp;that&nbsp;the&nbsp;fish&nbsp;mimics&nbsp;responsiveness</tt></dd></dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="BillyBass-set_debug"><strong>set_debug</strong></a>(DEBUG)</dt><dd><tt>Sets&nbsp;the&nbsp;debug&nbsp;level.&nbsp;Used&nbsp;primarily&nbsp;for&nbsp;debugging&nbsp;purposes<br>
+:param&nbsp;DEBUG:&nbsp;boolean&nbsp;indicating&nbsp;whether&nbsp;to&nbsp;set&nbsp;log_level&nbsp;to&nbsp;debug&nbsp;or&nbsp;not</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="threading.html#Thread">threading.Thread</a>:<br>
+<dl><dt><a name="BillyBass-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="BillyBass-getName"><strong>getName</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="BillyBass-isAlive"><strong>isAlive</strong></a> = is_alive(self)</dt><dd><tt>Return&nbsp;whether&nbsp;the&nbsp;thread&nbsp;is&nbsp;alive.<br>
+&nbsp;<br>
+This&nbsp;method&nbsp;returns&nbsp;True&nbsp;just&nbsp;before&nbsp;the&nbsp;<a href="#BillyBass-run">run</a>()&nbsp;method&nbsp;starts&nbsp;until&nbsp;just<br>
+after&nbsp;the&nbsp;<a href="#BillyBass-run">run</a>()&nbsp;method&nbsp;terminates.&nbsp;The&nbsp;module&nbsp;function&nbsp;enumerate()<br>
+returns&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;alive&nbsp;threads.</tt></dd></dl>
+
+<dl><dt><a name="BillyBass-isDaemon"><strong>isDaemon</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="BillyBass-is_alive"><strong>is_alive</strong></a>(self)</dt><dd><tt>Return&nbsp;whether&nbsp;the&nbsp;thread&nbsp;is&nbsp;alive.<br>
+&nbsp;<br>
+This&nbsp;method&nbsp;returns&nbsp;True&nbsp;just&nbsp;before&nbsp;the&nbsp;<a href="#BillyBass-run">run</a>()&nbsp;method&nbsp;starts&nbsp;until&nbsp;just<br>
+after&nbsp;the&nbsp;<a href="#BillyBass-run">run</a>()&nbsp;method&nbsp;terminates.&nbsp;The&nbsp;module&nbsp;function&nbsp;enumerate()<br>
+returns&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;alive&nbsp;threads.</tt></dd></dl>
+
+<dl><dt><a name="BillyBass-join"><strong>join</strong></a>(self, timeout=None)</dt><dd><tt>Wait&nbsp;until&nbsp;the&nbsp;thread&nbsp;terminates.<br>
+&nbsp;<br>
+This&nbsp;blocks&nbsp;the&nbsp;calling&nbsp;thread&nbsp;until&nbsp;the&nbsp;thread&nbsp;whose&nbsp;<a href="#BillyBass-join">join</a>()&nbsp;method&nbsp;is<br>
+called&nbsp;terminates&nbsp;--&nbsp;either&nbsp;normally&nbsp;or&nbsp;through&nbsp;an&nbsp;unhandled&nbsp;exception<br>
+or&nbsp;until&nbsp;the&nbsp;optional&nbsp;timeout&nbsp;occurs.<br>
+&nbsp;<br>
+When&nbsp;the&nbsp;timeout&nbsp;argument&nbsp;is&nbsp;present&nbsp;and&nbsp;not&nbsp;None,&nbsp;it&nbsp;should&nbsp;be&nbsp;a<br>
+floating&nbsp;point&nbsp;number&nbsp;specifying&nbsp;a&nbsp;timeout&nbsp;for&nbsp;the&nbsp;operation&nbsp;in&nbsp;seconds<br>
+(or&nbsp;fractions&nbsp;thereof).&nbsp;As&nbsp;<a href="#BillyBass-join">join</a>()&nbsp;always&nbsp;returns&nbsp;None,&nbsp;you&nbsp;must&nbsp;call<br>
+<a href="#BillyBass-isAlive">isAlive</a>()&nbsp;after&nbsp;<a href="#BillyBass-join">join</a>()&nbsp;to&nbsp;decide&nbsp;whether&nbsp;a&nbsp;timeout&nbsp;happened&nbsp;--&nbsp;if&nbsp;the<br>
+thread&nbsp;is&nbsp;still&nbsp;alive,&nbsp;the&nbsp;<a href="#BillyBass-join">join</a>()&nbsp;call&nbsp;timed&nbsp;out.<br>
+&nbsp;<br>
+When&nbsp;the&nbsp;timeout&nbsp;argument&nbsp;is&nbsp;not&nbsp;present&nbsp;or&nbsp;None,&nbsp;the&nbsp;operation&nbsp;will<br>
+block&nbsp;until&nbsp;the&nbsp;thread&nbsp;terminates.<br>
+&nbsp;<br>
+A&nbsp;thread&nbsp;can&nbsp;be&nbsp;<a href="#BillyBass-join">join</a>()ed&nbsp;many&nbsp;times.<br>
+&nbsp;<br>
+<a href="#BillyBass-join">join</a>()&nbsp;raises&nbsp;a&nbsp;RuntimeError&nbsp;if&nbsp;an&nbsp;attempt&nbsp;is&nbsp;made&nbsp;to&nbsp;join&nbsp;the&nbsp;current<br>
+thread&nbsp;as&nbsp;that&nbsp;would&nbsp;cause&nbsp;a&nbsp;deadlock.&nbsp;It&nbsp;is&nbsp;also&nbsp;an&nbsp;error&nbsp;to&nbsp;<a href="#BillyBass-join">join</a>()&nbsp;a<br>
+thread&nbsp;before&nbsp;it&nbsp;has&nbsp;been&nbsp;started&nbsp;and&nbsp;attempts&nbsp;to&nbsp;do&nbsp;so&nbsp;raises&nbsp;the&nbsp;same<br>
+exception.</tt></dd></dl>
+
+<dl><dt><a name="BillyBass-setDaemon"><strong>setDaemon</strong></a>(self, daemonic)</dt></dl>
+
+<dl><dt><a name="BillyBass-setName"><strong>setName</strong></a>(self, name)</dt></dl>
+
+<dl><dt><a name="BillyBass-start"><strong>start</strong></a>(self)</dt><dd><tt>Start&nbsp;the&nbsp;thread's&nbsp;activity.<br>
+&nbsp;<br>
+It&nbsp;must&nbsp;be&nbsp;called&nbsp;at&nbsp;most&nbsp;once&nbsp;per&nbsp;thread&nbsp;object.&nbsp;It&nbsp;arranges&nbsp;for&nbsp;the<br>
+object's&nbsp;<a href="#BillyBass-run">run</a>()&nbsp;method&nbsp;to&nbsp;be&nbsp;invoked&nbsp;in&nbsp;a&nbsp;separate&nbsp;thread&nbsp;of&nbsp;control.<br>
+&nbsp;<br>
+This&nbsp;method&nbsp;will&nbsp;raise&nbsp;a&nbsp;RuntimeError&nbsp;if&nbsp;called&nbsp;more&nbsp;than&nbsp;once&nbsp;on&nbsp;the<br>
+same&nbsp;thread&nbsp;object.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="threading.html#Thread">threading.Thread</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>daemon</strong></dt>
+<dd><tt>A&nbsp;boolean&nbsp;value&nbsp;indicating&nbsp;whether&nbsp;this&nbsp;thread&nbsp;is&nbsp;a&nbsp;daemon&nbsp;thread.<br>
+&nbsp;<br>
+This&nbsp;must&nbsp;be&nbsp;set&nbsp;before&nbsp;start()&nbsp;is&nbsp;called,&nbsp;otherwise&nbsp;RuntimeError&nbsp;is<br>
+raised.&nbsp;Its&nbsp;initial&nbsp;value&nbsp;is&nbsp;inherited&nbsp;from&nbsp;the&nbsp;creating&nbsp;thread;&nbsp;the<br>
+main&nbsp;thread&nbsp;is&nbsp;not&nbsp;a&nbsp;daemon&nbsp;thread&nbsp;and&nbsp;therefore&nbsp;all&nbsp;threads&nbsp;created&nbsp;in<br>
+the&nbsp;main&nbsp;thread&nbsp;default&nbsp;to&nbsp;daemon&nbsp;=&nbsp;False.<br>
+&nbsp;<br>
+The&nbsp;entire&nbsp;Python&nbsp;program&nbsp;exits&nbsp;when&nbsp;no&nbsp;alive&nbsp;non-daemon&nbsp;threads&nbsp;are<br>
+left.</tt></dd>
+</dl>
+<dl><dt><strong>ident</strong></dt>
+<dd><tt>Thread&nbsp;identifier&nbsp;of&nbsp;this&nbsp;thread&nbsp;or&nbsp;None&nbsp;if&nbsp;it&nbsp;has&nbsp;not&nbsp;been&nbsp;started.<br>
+&nbsp;<br>
+This&nbsp;is&nbsp;a&nbsp;nonzero&nbsp;integer.&nbsp;See&nbsp;the&nbsp;thread.get_ident()&nbsp;function.&nbsp;Thread<br>
+identifiers&nbsp;may&nbsp;be&nbsp;recycled&nbsp;when&nbsp;a&nbsp;thread&nbsp;exits&nbsp;and&nbsp;another&nbsp;thread&nbsp;is<br>
+created.&nbsp;The&nbsp;identifier&nbsp;is&nbsp;available&nbsp;even&nbsp;after&nbsp;the&nbsp;thread&nbsp;has&nbsp;exited.</tt></dd>
+</dl>
+<dl><dt><strong>name</strong></dt>
+<dd><tt>A&nbsp;string&nbsp;used&nbsp;for&nbsp;identification&nbsp;purposes&nbsp;only.<br>
+&nbsp;<br>
+It&nbsp;has&nbsp;no&nbsp;semantics.&nbsp;Multiple&nbsp;threads&nbsp;may&nbsp;be&nbsp;given&nbsp;the&nbsp;same&nbsp;name.&nbsp;The<br>
+initial&nbsp;name&nbsp;is&nbsp;set&nbsp;by&nbsp;the&nbsp;constructor.</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-main"><strong>main</strong></a>()</dt></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>logger</strong> = &lt;logging.Logger object&gt;</td></tr></table>
+</body></html>
