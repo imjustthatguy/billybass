@@ -11,8 +11,7 @@ Purpose: Extension for alexa pi that allows for the billy bass fish
 	 animatronic to be responsive to voice commands by moving its motors
 	 in a specified way.
 
-Notes:   This is a pure original software solution for controlling
-	 the synchronization of the fish speaking and alexa talking as
+Notes:   Controls the synchronization of the fish speaking and alexa talking as
 	 many users that have implemented a talking alexa animatronic bought
 	 sound sensors and mic amplifiers that solder onto pcb breadboards that listen for audio coming from the speakers. They then check to see if alexa is speaking through that device and move the animatronic motors respectively.
 	 This is inefficent in many ways as it can pick up sounds from outside sources and move its motors when alexa isn't speaking.
