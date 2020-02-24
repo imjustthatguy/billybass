@@ -556,8 +556,6 @@ def trigger_process(trigger):
 		print("Before alexayes.mp3...")
 		with billybass.BillyBass("trigger"):
 			player.play_speech(resources_path + 'alexayes.mp3')
-			#For shits and giggles...
-			#player.play_speech("/home/pi/Desktop/hahaha.mp3")
 		print("After alexayes.mp3..")
 
 	audio_stream = capture.silence_listener(force_record=force_record)
